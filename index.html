@@ -4,235 +4,447 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Akash Agrawal — Senior Product Manager | AI & Data Products</title>
-  <meta name="description" content="Senior Product Manager with 8+ years at Walmart Global Tech and Amazon. Specialising in AI/ML products, catalog intelligence, pricing strategy, and platform builds at scale. IIM Kozhikode Gold Medalist. Patent Filed." />
-  <meta name="keywords" content="Akash Agrawal, Product Manager, Senior PM, AI Product Manager, Walmart, Amazon, Catalog Intelligence, Pricing Strategy, LLM Products, Portfolio, IIM Kozhikode" />
+  <meta name="description" content="Senior Product Manager with 8+ years at Walmart Global Tech and Amazon. AI/ML products, catalog intelligence, pricing strategy, and platform builds at scale. IIM Kozhikode Gold Medalist. Patent Filed 2026." />
+  <meta name="keywords" content="Akash Agrawal, Senior Product Manager, AI Product Manager, Walmart, Amazon, Catalog Intelligence, Pricing Strategy, LLM Products, Portfolio, IIM Kozhikode, Google PM" />
   <meta name="author" content="Akash Agrawal" />
   <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph for LinkedIn/WhatsApp previews -->
   <meta property="og:title" content="Akash Agrawal — Senior PM | AI & Data Products" />
   <meta property="og:description" content="5 AI product case studies from Walmart and Amazon. Duplicate detection, compliance AI, pricing strategy, LLM pipelines. Patent Filed. IIM-K Gold Medalist." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://akashagrawal.github.io" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Akash Agrawal — Senior PM Portfolio" />
-  <meta name="twitter:description" content="8+ years building AI products at Walmart & Amazon. 5 case studies with real metrics." />
-
+  <meta property="og:url" content="https://akasha22-pm.github.io" />
   <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --surface2: #1a1a28;
+      --border: #2a2a3a;
+      --accent: #6366f1;
+      --accent2: #818cf8;
+      --green: #4ade80;
+      --red: #f87171;
+      --yellow: #fbbf24;
+      --text: #e2e8f0;
+      --muted: #64748b;
+      --subtle: #94a3b8;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0f0f0f;
-      color: #e8e8e8;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 20px;
+    /* ── HERO ─────────────────────────────── */
+    .hero {
+      max-width: 900px; margin: 0 auto; padding: 72px 24px 56px;
+      display: flex; align-items: center; gap: 48px;
     }
-
-    .container {
-      max-width: 680px;
-      width: 100%;
-      text-align: center;
+    .hero-photo {
+      width: 140px; height: 140px; border-radius: 50%;
+      object-fit: cover; object-position: center top;
+      border: 3px solid var(--accent);
+      flex-shrink: 0;
+      box-shadow: 0 0 40px rgba(99,102,241,0.3);
     }
-
-    .emoji { font-size: 52px; margin-bottom: 20px; display: block; }
-
-    h1 {
-      font-size: 2.4rem;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 8px;
-      letter-spacing: -0.5px;
+    .hero-text h1 { font-size: 2rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
+    .hero-text .role { color: var(--accent2); font-size: 1rem; margin-bottom: 12px; font-weight: 500; }
+    .hero-quote {
+      font-style: italic; color: var(--subtle); font-size: 0.9rem;
+      border-left: 3px solid var(--accent); padding-left: 12px;
+      margin-bottom: 20px; line-height: 1.5;
     }
-
-    .subtitle {
-      font-size: 1.05rem;
-      color: #888;
-      margin-bottom: 8px;
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 20px; padding: 4px 12px; font-size: 0.75rem; color: var(--subtle);
     }
-
-    .tagline {
-      font-size: 1rem;
-      color: #aaa;
-      font-style: italic;
-      margin-bottom: 36px;
-      border-left: 3px solid #4f46e5;
-      padding-left: 14px;
-      text-align: left;
-    }
-
-    .cta {
-      display: inline-block;
-      background: #4f46e5;
-      color: white;
-      text-decoration: none;
-      padding: 16px 36px;
-      border-radius: 10px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 48px;
+    .cta-row { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+    .cta-primary {
+      background: var(--accent); color: white; text-decoration: none;
+      padding: 10px 22px; border-radius: 8px; font-size: 0.9rem; font-weight: 600;
       transition: background 0.2s;
     }
-    .cta:hover { background: #4338ca; }
-
-    .divider {
-      border: none;
-      border-top: 1px solid #222;
-      margin: 0 0 40px 0;
+    .cta-primary:hover { background: #4f46e5; }
+    .cta-secondary {
+      border: 1px solid var(--border); color: var(--subtle); text-decoration: none;
+      padding: 10px 22px; border-radius: 8px; font-size: 0.9rem;
+      transition: border-color 0.2s, color 0.2s;
     }
+    .cta-secondary:hover { border-color: var(--accent); color: var(--text); }
 
-    .case-studies {
-      display: grid;
-      gap: 16px;
-      text-align: left;
-      margin-bottom: 48px;
+    /* ── SECTION ──────────────────────────── */
+    .section { max-width: 900px; margin: 0 auto; padding: 0 24px 64px; }
+    .section-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 24px;
     }
+    hr.divider { border: none; border-top: 1px solid var(--border); margin-bottom: 48px; }
 
-    .card {
-      background: #1a1a1a;
-      border: 1px solid #2a2a2a;
-      border-radius: 10px;
-      padding: 18px 20px;
-      text-decoration: none;
-      color: inherit;
-      transition: border-color 0.2s, background 0.2s;
-      display: block;
+    /* ── CASE STUDY CARD ──────────────────── */
+    .cs-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 14px; margin-bottom: 24px; overflow: hidden;
+      text-decoration: none; color: inherit; display: block;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
-    .card:hover {
-      border-color: #4f46e5;
-      background: #1e1e2e;
-    }
+    .cs-card:hover { border-color: var(--accent); box-shadow: 0 4px 32px rgba(99,102,241,0.12); }
 
-    .card-header {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 6px;
+    .cs-header {
+      padding: 20px 24px 16px;
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
     }
-
-    .card-emoji { font-size: 1.4rem; flex-shrink: 0; margin-top: 1px; }
-
-    .card-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #e8e8e8;
-      line-height: 1.4;
+    .cs-header-left { flex: 1; }
+    .cs-number { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+    .cs-title { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .cs-subtitle { font-size: 0.85rem; color: var(--subtle); }
+    .cs-tags { display: flex; gap: 6px; flex-wrap: wrap; flex-shrink: 0; }
+    .tag {
+      font-size: 0.68rem; font-weight: 600; padding: 3px 8px; border-radius: 4px;
+      text-transform: uppercase; letter-spacing: 0.5px;
     }
+    .tag-live { background: rgba(74,222,128,0.12); color: var(--green); border: 1px solid rgba(74,222,128,0.25); }
+    .tag-patent { background: rgba(99,102,241,0.12); color: var(--accent2); border: 1px solid rgba(99,102,241,0.25); }
+    .tag-award { background: rgba(251,191,36,0.12); color: var(--yellow); border: 1px solid rgba(251,191,36,0.25); }
 
-    .card-metric {
-      font-size: 0.82rem;
-      color: #4ade80;
-      margin-left: 36px;
-      font-weight: 500;
+    /* ── TLDR DASHBOARD ───────────────────── */
+    .tldr {
+      border-top: 1px solid var(--border);
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
     }
+    .tldr-col { padding: 16px 20px; }
+    .tldr-col:not(:last-child) { border-right: 1px solid var(--border); }
+    .tldr-col-label {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .tldr-col.before .tldr-col-label { color: var(--red); }
+    .tldr-col.decisions .tldr-col-label { color: var(--accent2); }
+    .tldr-col.after .tldr-col-label { color: var(--green); }
 
-    .credentials {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin-bottom: 40px;
+    .tldr-item {
+      display: flex; align-items: flex-start; gap: 6px;
+      font-size: 0.8rem; color: var(--subtle); margin-bottom: 5px; line-height: 1.4;
     }
+    .tldr-item .dot { font-size: 0.6rem; margin-top: 4px; flex-shrink: 0; }
+    .tldr-col.before .dot { color: var(--red); }
+    .tldr-col.decisions .dot { color: var(--accent2); }
+    .tldr-col.after .dot { color: var(--green); }
+    .tldr-item strong { color: var(--text); }
 
-    .badge {
-      background: #1a1a1a;
-      border: 1px solid #2a2a2a;
-      border-radius: 20px;
-      padding: 6px 14px;
-      font-size: 0.8rem;
-      color: #aaa;
+    /* ── META BAR ─────────────────────────── */
+    .cs-meta {
+      border-top: 1px solid var(--border);
+      padding: 10px 20px;
+      display: flex; gap: 20px; flex-wrap: wrap;
+      background: rgba(255,255,255,0.02);
     }
+    .meta-item { font-size: 0.75rem; color: var(--muted); display: flex; align-items: center; gap: 5px; }
+    .meta-item span { color: var(--subtle); }
 
-    .contact {
-      font-size: 0.9rem;
-      color: #666;
+    /* ── CREDENTIALS ──────────────────────── */
+    .creds-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .cred-item {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 14px 16px;
+      display: flex; align-items: center; gap: 12px;
     }
-    .contact a { color: #4f46e5; text-decoration: none; }
-    .contact a:hover { text-decoration: underline; }
+    .cred-icon { font-size: 1.4rem; }
+    .cred-title { font-size: 0.85rem; font-weight: 600; color: var(--text); }
+    .cred-sub { font-size: 0.75rem; color: var(--muted); }
+
+    /* ── CONTACT ──────────────────────────── */
+    .contact-row { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+    .contact-link { color: var(--accent2); text-decoration: none; font-size: 0.9rem; }
+    .contact-link:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .hero { flex-direction: column; align-items: flex-start; gap: 24px; padding: 40px 20px 32px; }
+      .tldr { grid-template-columns: 1fr; }
+      .tldr-col:not(:last-child) { border-right: none; border-bottom: 1px solid var(--border); }
+      .creds-grid { grid-template-columns: 1fr; }
+      .cs-header { flex-direction: column; }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
 
-    <span class="emoji">🧠</span>
-    <h1>Akash Agrawal</h1>
-    <p class="subtitle">Senior Product Manager · AI & Data Products · Walmart Global Tech</p>
+  <!-- HERO -->
+  <div class="hero">
+    <img src="photo.jpg" alt="Akash Agrawal" class="hero-photo" />
+    <div class="hero-text">
+      <h1>Akash Agrawal</h1>
+      <div class="role">Senior Product Manager · AI & Data Products · Walmart Global Tech</div>
+      <div class="hero-quote">
+        "Most PMs ship solutions. I spend time making sure we're solving the right problem — even when it means proving the entire team's assumption is wrong."
+      </div>
+      <div class="hero-badges">
+        <span class="badge">🥇 IIM Kozhikode Gold Medal</span>
+        <span class="badge">🏆 Amazon Pinnacle Award</span>
+        <span class="badge">🏆 Walmart Bravo Award</span>
+        <span class="badge">📝 Patent Filed 2026</span>
+        <span class="badge">📊 CFA Level 3</span>
+      </div>
+      <div class="cta-row">
+        <a class="cta-primary" href="https://mammoth-filament-ddb.notion.site/Akash-Agrawal-Product-Portfolio-345175fb4ec781808ff8f5e6ec013a9b" target="_blank">View Full Portfolio →</a>
+        <a class="cta-secondary" href="mailto:akasha22@iimklive.com">Get in Touch</a>
+        <a class="cta-secondary" href="https://linkedin.com/in/akashagrwl" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </div>
 
-    <p class="tagline">
-      "I don't build features. I solve problems. Features are just the evidence that the problem is solved."
-    </p>
+  <div style="max-width:900px;margin:0 auto;padding:0 24px;"><hr class="divider" /></div>
 
-    <a class="cta" href="https://mammoth-filament-ddb.notion.site/Akash-Agrawal-Product-Portfolio-345175fb4ec781808ff8f5e6ec013a9b" target="_blank" rel="noopener">
-      View Full Portfolio →
+  <!-- CASE STUDIES -->
+  <div class="section">
+    <div class="section-label">Case Studies · 5 Products · 8 Years</div>
+
+    <!-- CS 1 -->
+    <a class="cs-card" href="https://mammoth-filament-ddb.notion.site/Case-Study-1-From-23-Chaos-to-5-Clarity-AI-Duplicate-Detection-345175fb4ec781a28167d7e3b1bfdbe4" target="_blank" rel="noopener">
+      <div class="cs-header">
+        <div class="cs-header-left">
+          <div class="cs-number">Case Study 01 · Catalog AI · Walmart</div>
+          <div class="cs-title">🔁 From 23% Chaos to 5% Clarity — AI Duplicate Detection</div>
+          <div class="cs-subtitle">Multimodal embeddings + cross-encoder scoring to deduplicate a 100M+ item catalog at scale</div>
+        </div>
+        <div class="cs-tags">
+          <span class="tag tag-live">Live</span>
+          <span class="tag tag-patent">Patent Filed</span>
+        </div>
+      </div>
+      <div class="tldr">
+        <div class="tldr-col before">
+          <div class="tldr-col-label">⚠ Before</div>
+          <div class="tldr-item"><span class="dot">▸</span><span><strong>23%</strong> duplicate rate</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Barcode/string matching only</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Missed semantic duplicates</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Manual review, days SLA</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Diluted search relevance</span></div>
+        </div>
+        <div class="tldr-col decisions">
+          <div class="tldr-col-label">🎯 Key PM Decisions</div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Multimodal embeddings (1400-dim text + image)</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>3-tier confidence: ≥0.95 auto / 0.80–0.95 review / &lt;0.80 skip</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Category-configurable thresholds (collectibles vs fashion)</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>8-week shadow mode before any auto-merge</span></div>
+        </div>
+        <div class="tldr-col after">
+          <div class="tldr-col-label">✅ After</div>
+          <div class="tldr-item"><span class="dot">▸</span><span><strong>&lt;5%</strong> duplicate rate</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span><strong>98%</strong> detection precision</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span><strong>10M+</strong> items/month</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span><strong>1–3 sec</strong> processing time</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Patent filed 2026</span></div>
+        </div>
+      </div>
+      <div class="cs-meta">
+        <div class="meta-item">⏱ <span>4 months</span></div>
+        <div class="meta-item">👥 <span>DS: 4 · Eng: 8</span></div>
+        <div class="meta-item">🏛 <span>6+ teams aligned</span></div>
+        <div class="meta-item">⚙️ <span>Multimodal AI · Vector Search · Cross-Encoder</span></div>
+      </div>
     </a>
 
-    <hr class="divider" />
-
-    <div class="case-studies">
-
-      <a class="card" href="https://mammoth-filament-ddb.notion.site/Case-Study-1-From-23-Chaos-to-5-Clarity-AI-Duplicate-Detection-345175fb4ec781a28167d7e3b1bfdbe4" target="_blank" rel="noopener">
-        <div class="card-header">
-          <span class="card-emoji">🔁</span>
-          <span class="card-title">From 23% Chaos to 5% Clarity — AI Duplicate Detection (Patent Filed)</span>
+    <!-- CS 2 -->
+    <a class="cs-card" href="https://mammoth-filament-ddb.notion.site/Case-Study-2-From-1-Week-to-4-Hours-Trust-Safety-AI-Gateway-345175fb4ec781149fe1ea5cd18c48e7" target="_blank" rel="noopener">
+      <div class="cs-header">
+        <div class="cs-header-left">
+          <div class="cs-number">Case Study 02 · Trust & Safety · Walmart</div>
+          <div class="cs-title">🛡️ From 1 Week to 4 Hours — LLM Compliance Gateway</div>
+          <div class="cs-subtitle">Redesigned enforcement from "block everyone" to data-driven tiered architecture. 500K items/day.</div>
         </div>
-        <p class="card-metric">23% → &lt;5% duplicate rate · 10M+ items/month · 98% precision</p>
-      </a>
-
-      <a class="card" href="https://mammoth-filament-ddb.notion.site/Case-Study-2-From-1-Week-to-4-Hours-Trust-Safety-AI-Gateway-345175fb4ec781149fe1ea5cd18c48e7" target="_blank" rel="noopener">
-        <div class="card-header">
-          <span class="card-emoji">🛡️</span>
-          <span class="card-title">From 1 Week to 4 Hours — Trust & Safety AI Gateway</span>
+        <div class="cs-tags">
+          <span class="tag tag-live">Live</span>
         </div>
-        <p class="card-metric">500K items/day · 96% detection precision · 50% violation reduction</p>
-      </a>
-
-      <a class="card" href="https://mammoth-filament-ddb.notion.site/Case-Study-3-The-Metric-Nobody-Used-A-PM-s-Best-Failure-345175fb4ec781db9198f228b5d3ef7c" target="_blank" rel="noopener">
-        <div class="card-header">
-          <span class="card-emoji">📊</span>
-          <span class="card-title">The Metric Nobody Used — A PM's Best Failure (→ WBR Adoption)</span>
+      </div>
+      <div class="tldr">
+        <div class="tldr-col before">
+          <div class="tldr-col-label">⚠ Before</div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Regex keyword matching</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span><strong>40%</strong> detection precision</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Bad actors used euphemisms to evade</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Post-publication detection (hours–days)</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span><strong>1-week</strong> manual review SLA</span></div>
         </div>
-        <p class="card-metric">0% → 3-team WBR adoption · Rebuilt from scratch after honest post-mortem</p>
-      </a>
-
-      <a class="card" href="https://mammoth-filament-ddb.notion.site/Case-Study-4-Finding-the-Invisible-Price-Gap-345175fb4ec781059f77f6fe9a7436ff" target="_blank" rel="noopener">
-        <div class="card-header">
-          <span class="card-emoji">💰</span>
-          <span class="card-title">Finding the Invisible Price Gap — Regional Pricing Strategy</span>
+        <div class="tldr-col decisions">
+          <div class="tldr-col-label">🎯 Key PM Decisions</div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Data: 1P = 65% GMV but only 2% violations → tiered trust</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>1P: Fast Lane (publish + daily sweep) vs 3P: Inline Gate</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>15x LLM batch optimization (15 items/prompt)</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Bootstrapped from historical audit logs (no 30K labels)</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>VIP Lane: top 1% sellers reviewed in 4 hours</span></div>
         </div>
-        <p class="card-metric">18% price perception improvement · Amazon Pinnacle Award</p>
-      </a>
-
-      <a class="card" href="https://mammoth-filament-ddb.notion.site/Case-Study-5-Teaching-AI-to-Read-Product-Data-345175fb4ec78171b9a9c3cc4ceb0be3" target="_blank" rel="noopener">
-        <div class="card-header">
-          <span class="card-emoji">🤖</span>
-          <span class="card-title">Teaching AI to Read Product Data — LLM Attribute Extraction</span>
+        <div class="tldr-col after">
+          <div class="tldr-col-label">✅ After</div>
+          <div class="tldr-item"><span class="dot">▸</span><span><strong>96%</strong> detection precision</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span><strong>500K</strong> items evaluated/day</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span><strong>4-hour</strong> SLA (−95%)</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span><strong>50%</strong> live violations reduced</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Legal signed off on AI-driven blocking</span></div>
         </div>
-        <p class="card-metric">46% Content Quality improvement · 98% classification precision</p>
-      </a>
+      </div>
+      <div class="cs-meta">
+        <div class="meta-item">⏱ <span>6 months</span></div>
+        <div class="meta-item">👥 <span>DS: 4 · Eng: 8</span></div>
+        <div class="meta-item">🏛 <span>Legal · T&S · Seller Exp · Compliance</span></div>
+        <div class="meta-item">⚙️ <span>LLM · RAG · Multimodal OCR · Shadow Mode</span></div>
+      </div>
+    </a>
 
+    <!-- CS 3 -->
+    <a class="cs-card" href="https://mammoth-filament-ddb.notion.site/Case-Study-3-The-Metric-Nobody-Used-A-PM-s-Best-Failure-345175fb4ec781db9198f228b5d3ef7c" target="_blank" rel="noopener">
+      <div class="cs-header">
+        <div class="cs-header-left">
+          <div class="cs-number">Case Study 03 · Metrics Design · Amazon</div>
+          <div class="cs-title">📊 The Metric Nobody Used — From Failure to 3-Team WBR</div>
+          <div class="cs-subtitle">Built a metric the entire team rejected. Proved the team wrong with engineering logs. Redesigned it into a cross-functional diagnostic tool.</div>
+        </div>
+        <div class="cs-tags">
+          <span class="tag tag-live">WBR Adopted</span>
+        </div>
+      </div>
+      <div class="tldr">
+        <div class="tldr-col before">
+          <div class="tldr-col-label">⚠ Before</div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Metric launched, <strong>0%</strong> adoption</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Team said: "incorrect representation"</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>No ownership → no action</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Stakeholder feedback: "So what?"</span></div>
+        </div>
+        <div class="tldr-col decisions">
+          <div class="tldr-col-label">🎯 Key PM Decisions</div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Pulled eng logs: <strong>60% users sort price low→high</strong></span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Proved metric captured real intent, not a flaw</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>3 root causes: Selection Gap / Search Rank / Pricing</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Each category → owned by a different team</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Google Ads collaboration for offsite competitiveness</span></div>
+        </div>
+        <div class="tldr-col after">
+          <div class="tldr-col-label">✅ After</div>
+          <div class="tldr-item"><span class="dot">▸</span><span><strong>3 WBR teams</strong> adopted permanently</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Offsite competitiveness: <strong>20% → 60%</strong></span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Assortment + Search + Pricing aligned</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Cross-functional alignment mechanism</span></div>
+        </div>
+      </div>
+      <div class="cs-meta">
+        <div class="meta-item">⏱ <span>4 months</span></div>
+        <div class="meta-item">🏛 <span>Assortment · Search · Pricing · Google Ads</span></div>
+        <div class="meta-item">⚙️ <span>Metrics Design · Eng Logs · User Research · WBR</span></div>
+      </div>
+    </a>
+
+    <!-- CS 4 -->
+    <a class="cs-card" href="https://mammoth-filament-ddb.notion.site/Case-Study-4-Finding-the-Invisible-Price-Gap-345175fb4ec781059f77f6fe9a7436ff" target="_blank" rel="noopener">
+      <div class="cs-header">
+        <div class="cs-header-left">
+          <div class="cs-number">Case Study 04 · Pricing Strategy · Amazon</div>
+          <div class="cs-title">💰 Finding the Invisible Price Gap — Regional Pricing Strategy</div>
+          <div class="cs-subtitle">Internal data said "competitive." Customers said "expensive." Both were right — we were measuring the wrong thing entirely.</div>
+        </div>
+        <div class="cs-tags">
+          <span class="tag tag-award">Pinnacle Award</span>
+          <span class="tag tag-live">VP Approved</span>
+        </div>
+      </div>
+      <div class="tldr">
+        <div class="tldr-col before">
+          <div class="tldr-col-label">⚠ Before</div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Online-only price monitoring</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Single location per competitor</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>$1M survey to understand problem</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Leadership rejected as "out of scope"</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>18% price perception gap</span></div>
+        </div>
+        <div class="tldr-col decisions">
+          <div class="tldr-col-label">🎯 Key PM Decisions</div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Rejected $1M survey; ran $10K POC instead</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Primary research: friends + vendors in US</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>4 cities × top 30 KVIs × top 3 retailers</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span><strong>34% price variance</strong> across cities uncovered</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Numbeo GPI correlation as scalable proxy model</span></div>
+        </div>
+        <div class="tldr-col after">
+          <div class="tldr-col-label">✅ After</div>
+          <div class="tldr-item"><span class="dot">▸</span><span><strong>18%</strong> price perception improvement</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>3 hypotheses all validated</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>VP PRFAQ approved (6 org teams)</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Offline signals now permanent WBR metric</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Amazon Pinnacle Award</span></div>
+        </div>
+      </div>
+      <div class="cs-meta">
+        <div class="meta-item">⏱ <span>8 months</span></div>
+        <div class="meta-item">🏛 <span>Tech · Seller · CX · Legal · Category · Consumables</span></div>
+        <div class="meta-item">⚙️ <span>Mystery Shopping · GPI Correlation · PRFAQ · Working Backwards</span></div>
+      </div>
+    </a>
+
+    <!-- CS 5 -->
+    <a class="cs-card" href="https://mammoth-filament-ddb.notion.site/Case-Study-5-Teaching-AI-to-Read-Product-Data-345175fb4ec78171b9a9c3cc4ceb0be3" target="_blank" rel="noopener">
+      <div class="cs-header">
+        <div class="cs-header-left">
+          <div class="cs-number">Case Study 05 · Catalog AI · Walmart</div>
+          <div class="cs-title">🤖 Teaching AI to Read Product Data — LLM Attribute Extraction</div>
+          <div class="cs-subtitle">46% content quality improvement by treating product images as documents, not just pictures.</div>
+        </div>
+        <div class="cs-tags">
+          <span class="tag tag-live">Live</span>
+        </div>
+      </div>
+      <div class="tldr">
+        <div class="tldr-col before">
+          <div class="tldr-col-label">⚠ Before</div>
+          <div class="tldr-item"><span class="dot">▸</span><span>~30% attribute field coverage</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Manual enrichment (spot coverage)</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Images not read for text content</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Search filters returning zero results</span></div>
+        </div>
+        <div class="tldr-col decisions">
+          <div class="tldr-col-label">🎯 Key PM Decisions</div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Extractability × Impact matrix for scope</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Confidence gating: ≥0.90 auto / 0.70–0.90 check / &lt;0.70 skip</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>OCR + LLM noise-cleaning pipeline from images</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>"Skip rather than guess" as core design principle</span></div>
+        </div>
+        <div class="tldr-col after">
+          <div class="tldr-col-label">✅ After</div>
+          <div class="tldr-item"><span class="dot">▸</span><span><strong>+46%</strong> Content Quality score</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span><strong>98%</strong> classification precision</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Full catalog batch (automated)</span></div>
+          <div class="tldr-item"><span class="dot">▸</span><span>Search filter coverage expanded</span></div>
+        </div>
+      </div>
+      <div class="cs-meta">
+        <div class="meta-item">⏱ <span>3 months</span></div>
+        <div class="meta-item">👥 <span>DS: 4 · Eng: 8</span></div>
+        <div class="meta-item">⚙️ <span>LLM · OCR · Confidence Gating · Batch Processing</span></div>
+      </div>
+    </a>
+
+  </div><!-- /section -->
+
+  <div style="max-width:900px;margin:0 auto;padding:0 24px;"><hr class="divider" /></div>
+
+  <!-- CREDENTIALS -->
+  <div class="section">
+    <div class="section-label">Credentials & Recognition</div>
+    <div class="creds-grid">
+      <div class="cred-item"><span class="cred-icon">🥇</span><div><div class="cred-title">IIM Kozhikode — Gold Medal</div><div class="cred-sub">Rank 1 of entire graduating class · MBA 2017</div></div></div>
+      <div class="cred-item"><span class="cred-icon">🏆</span><div><div class="cred-title">Amazon Pinnacle Award</div><div class="cred-sub">Regional Pricing Strategy · 2023</div></div></div>
+      <div class="cred-item"><span class="cred-icon">🥈</span><div><div class="cred-title">NIT Raipur — Silver Medal</div><div class="cred-sub">B.Tech Mechanical Engineering · 2015</div></div></div>
+      <div class="cred-item"><span class="cred-icon">🏆</span><div><div class="cred-title">Walmart Bravo Award</div><div class="cred-sub">Catalog AI Platform · 2024</div></div></div>
+      <div class="cred-item"><span class="cred-icon">📊</span><div><div class="cred-title">CFA Level 3 Candidate</div><div class="cred-sub">Cleared Levels 1 & 2</div></div></div>
+      <div class="cred-item"><span class="cred-icon">📝</span><div><div class="cred-title">Patent Filed — 2026</div><div class="cred-sub">Multimodal AI Item Deduplication Framework</div></div></div>
     </div>
-
-    <div class="credentials">
-      <span class="badge">🥇 IIM Kozhikode — Gold Medal</span>
-      <span class="badge">🥈 NIT — Silver Medal</span>
-      <span class="badge">📊 CFA Level 3</span>
-      <span class="badge">🏆 Amazon Pinnacle Award</span>
-      <span class="badge">🏆 Walmart Bravo Award</span>
-      <span class="badge">📝 Patent Filed (2026)</span>
-    </div>
-
-    <p class="contact">
-      <a href="mailto:akasha22@iimklive.com">akasha22@iimklive.com</a>
-      &nbsp;·&nbsp;
-      <a href="https://linkedin.com/in/akashagrwl" target="_blank" rel="noopener">linkedin.com/in/akashagrwl</a>
-    </p>
-
   </div>
+
+  <div style="max-width:900px;margin:0 auto;padding:0 24px;"><hr class="divider" /></div>
+
+  <!-- CONTACT -->
+  <div class="section" style="padding-bottom: 80px;">
+    <div class="section-label">Contact</div>
+    <div class="contact-row">
+      <a class="contact-link" href="mailto:akasha22@iimklive.com">📧 akasha22@iimklive.com</a>
+      <a class="contact-link" href="https://linkedin.com/in/akashagrwl" target="_blank">💼 linkedin.com/in/akashagrwl</a>
+      <span style="color:var(--muted);font-size:0.85rem;">📍 Bengaluru, India</span>
+    </div>
+  </div>
+
 </body>
 </html>
